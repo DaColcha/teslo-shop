@@ -2,10 +2,22 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
-# TESLO API 
+# TESLO API
 
-1. Configurar variables de entorno basdo en el tamplate
-2. Levantar el contenedor de la base de datos 
-```
-docker-compose up -d
-```
+1. Clonar el proyecto y ejecutar el comando
+
+    ```
+    pnpm install
+    ```
+  
+2. Configurar variables de entorno basado en el tamplate __.env.template__
+3. Levantar el contenedor de la base de datos
+
+    ```
+    docker-compose up -d
+    ```
+4. Ejecutar el SEED
+
+    ```
+    GET http://localhost:3000/api/seed
+    ```
