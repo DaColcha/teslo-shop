@@ -7,16 +7,22 @@
 1. Clonar el proyecto y ejecutar el comando
 
     ```
-    pnpm install
+    bun i
     ```
   
 2. Configurar variables de entorno basado en el tamplate __.env.template__
+
 3. Levantar el contenedor de la base de datos
 
     ```
     docker-compose up -d
     ```
-4. Ejecutar el SEED
+4. Levantar la API 
+    ```
+    bun start:dev
+    ```
+
+5. Ejecutar el SEED
 
     ```
     GET http://localhost:3000/api/seed

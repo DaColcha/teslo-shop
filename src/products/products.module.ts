@@ -3,6 +3,8 @@ import { ProductsService } from './products.service';
 import { ProductsController } from './products.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductImage, Product } from './entities';
+import { Auth } from 'src/auth/decorators';
+import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
   controllers: [ ProductsController ],
@@ -11,6 +13,8 @@ import { ProductImage, Product } from './entities';
     TypeOrmModule.forFeature([ 
       Product, ProductImage 
     ]),
+
+    AuthModule
   ],
   exports: [ ProductsService ]
 })
