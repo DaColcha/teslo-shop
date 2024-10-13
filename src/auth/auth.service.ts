@@ -69,6 +69,12 @@ export class AuthService {
     };
   }
 
+  async checkAuthStatus( user: User ) { 
+    return {
+      ...user,
+      token: this.jwtToken({ id: user.id })
+    };
+  }
 
   private jwtToken( payload: JwtPayload ): string {
     
